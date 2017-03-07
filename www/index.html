@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Домашний бюджет</title>
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="css/light/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/light/jquery-ui.structure.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/light/jquery-ui.theme.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+ 
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.style-tabs .ui-tabs-panel {
+    padding: 1px;
+}
+
+.ui-widget-header {
+    font-weight: bold;
+    height:20px
+}
+
+.ui-widget-header ul {
+    height:18px;   
+}
+
+.ui-tabs .ui-tabs-nav li {
+    height:18px;
+    font-size:17px;
+
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    position:relative;
+    top:-12px  
+}
+
+</style>
+ 
+<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/i18n/grid.locale-ru.js" type="text/javascript"></script>
+<script src="js/jquery.jqGrid.js" type="text/javascript"></script>
+<script src="js/budget/main.js" type="text/javascript"></script>
+<script src="js/budget/operations.js" type="text/javascript"></script>
+<script src="js/budget/categories.js" type="text/javascript"></script>
+ 
+</head>
+<body>
+<div id="tabs" class="style-tabs">
+    <ul>
+        <li><a href="#tab_operations">Операции</a></li>
+        <li><a href="#tab_categories">Категории</a></li>
+    </ul>
+    <div id="tab_operations">
+        <table id="operations"></table> 
+        <div id="operations_pager"></div>
+    </div>
+    <div id="tab_categories">
+        <table id="categories"></table> 
+        <div id="categories_pager"></div>
+    </div>
+</div>
+</body>
+</html>
