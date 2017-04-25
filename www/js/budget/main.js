@@ -1,7 +1,3 @@
-function initForm(formid)
-{
-    //alert(formid[0].length);
-}
 
 function checkRecord(postdata, formid)
 {

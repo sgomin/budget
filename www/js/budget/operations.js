@@ -1,7 +1,3 @@
-function initForm(formid)
-{
-    //alert(formid[0].length);
-}
 
 function checkRecord(postdata, formid)
 {
@@ -25,6 +21,44 @@ function checkRecord(postdata, formid)
     
     return [true];
 }
+
+
+function evalAmount(event)
+{
+  var expr = event.target.value;
+  
+  if (!expr)
+  {
+    return;
+  }
+  
+  expr = expr.replace(/,/g , ".");
+  
+  if (/^([-+/*]\d+(\.\d+)?)*/.test(expr))
+  {
+    event.target.value = eval(expr);
+  }
+}
+
+function onAmountKey(event)
+{
+    if (event.which == 13)
+    {
+        evalAmount(event);
+    }
+}
+
+function initForm(formid)
+{
+    var expense = $("#expense", formid);
+    var income  = $("#income", formid);
+    
+    expense.blur(evalAmount);
+    expense.keypress(onAmountKey);
+    income.blur(evalAmount);
+    income.keypress(onAmountKey);
+}
+
 
 function initOperations() 
 {    
