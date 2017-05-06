@@ -42,9 +42,17 @@ function evalAmount(event)
 
 function onAmountKey(event)
 {
-    if (event.which == 13)
+    if (event.which == 13 || event.which == 61)
     {
         evalAmount(event);
+        return false;
+    }
+    
+    var chr = String.fromCharCode(event.which);
+    
+    if ("1234567890-+/*() ,.".indexOf(chr) < 0)
+    {
+        return false;
     }
 }
 
