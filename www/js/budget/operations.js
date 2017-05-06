@@ -40,17 +40,25 @@ function evalAmount(event)
   }
 }
 
-function onAmountKey(event)
+function onAmountKey(e)
 {
-    if (event.which == 13 || event.which == 61)
+    // backspace, delete, home, end, left, right
+    if (e.which == 8 || e.which == 46 || e.which == 37 || e.which == 39 ||
+        e.which == 35 || e.which == 36)
     {
-        evalAmount(event);
+        return true;
+    }
+
+    // enter, equal
+    if (e.which == 13 || e.which == 61)
+    {
+        evalAmount(e);
         return false;
     }
     
-    var chr = String.fromCharCode(event.which);
+    var chr = String.fromCharCode(e.which);
     
-    if ("1234567890-+/*() ,.".indexOf(chr) < 0)
+    if ("1234567890-+/*%() ,.".indexOf(chr) < 0)
     {
         return false;
     }
