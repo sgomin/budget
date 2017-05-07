@@ -28,5 +28,6 @@ $(function () {
     });
 
     initOperations();
-    initCategories();    
+    initCategories();
+    initReports();     
 });

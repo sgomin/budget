@@ -48,9 +48,11 @@ html, body {
 <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/i18n/grid.locale-ru.js" type="text/javascript"></script>
 <script src="js/jquery.jqGrid.js" type="text/javascript"></script>
+<script src="js/highcharts.js" type="text/javascript"></script>
 <script src="js/budget/main.js" type="text/javascript"></script>
 <script src="js/budget/operations.js" type="text/javascript"></script>
 <script src="js/budget/categories.js" type="text/javascript"></script>
+<script src="js/budget/reports.js" type="text/javascript"></script>
  
 </head>
 <body>
@@ -58,6 +60,7 @@ html, body {
     <ul>
         <li><a href="#tab_operations">Операции</a></li>
         <li><a href="#tab_categories">Категории</a></li>
+        <li><a href="#tab_reports">Отчеты</a></li>
     </ul>
     <div id="tab_operations">
         <table id="operations"></table> 
@@ -66,6 +69,13 @@ html, body {
     <div id="tab_categories">
         <table id="categories"></table> 
         <div id="categories_pager"></div>
+    </div>
+    <div id="tab_reports">
+        <label for="from">Расходы с</label>
+        <input type="text" id="from" name="from">
+        <label for="to">по</label>
+        <input type="text" id="to" name="to">
+        <div id="chart" style="height: 89%"></div>
     </div>
 </div>
 </body>
