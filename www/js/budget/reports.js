@@ -24,6 +24,7 @@ function initReports()
             dateFormat: dateFormat,
             defaultDate: "-1m",
             changeMonth: true,
+            changeYear: true,
             numberOfMonths: 1
         })
         .on( "change", function() 

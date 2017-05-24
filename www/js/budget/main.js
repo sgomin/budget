@@ -23,11 +23,12 @@ function checkRecord(postdata, formid)
 }
 
 $(function () {
-    $( "#tabs" ).tabs({
-        heightStyle: "content"
-    });
-
+    
     initOperations();
     initCategories();
-    initReports();     
+    initReports(); 
+    
+    $( "#tabs" ).tabs({
+        heightStyle: "content"
+    });    
 });
