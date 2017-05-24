@@ -36,7 +36,7 @@ function evalAmount(event)
   
   if (/^([-+/*]\d+(\.\d+)?)*/.test(expr))
   {
-    event.target.value = eval(expr);
+    event.target.value = Math.round(eval(expr)*100)/100.;
   }
 }
 
